@@ -4,10 +4,16 @@
     </a>
     <span>Portal de exámenes</span>
     <span class="example-spacer"></span>
-    <a [routerLink]="'/login'" class="link-light">
+    <a *ngIf="!login.isLoggedIn()" [routerLink]="'/login'" class="link-light">
         Iniciar sesión
     </a>
-    <a [routerLink]="'/signup'" class="link-light ml20">
+    <a *ngIf="!login.isLoggedIn()" [routerLink]="'/signup'" class="link-light ml20">
         Registrar
     </a>
+    <a *ngIf="login.isLoggedIn()" (click)="logout()" class="link-light ml20">
+        Cerrar Sesion
+    </a>
+    <button *ngIf="login.isLoggedIn()" mat-button style="margin-right: 10px;" class="link-light ml20">
+        {{ login.getUser().username }}
+    </button>
 </mat-toolbar>
