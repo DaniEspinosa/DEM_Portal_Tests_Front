@@ -13,7 +13,7 @@
     <a *ngIf="login.isLoggedIn()" (click)="logout()" class="link-light ml20">
         Cerrar Sesion
     </a>
-    <button *ngIf="login.isLoggedIn()" mat-button style="margin-right: 10px;" class="link-light ml20">
+    <button *ngIf="login.isLoggedIn()" mat-button style="margin-right: 10px;" class="link-light ml20" routerLink="/admin/profile">
         {{ login.getUser().username }}
     </button>
 </mat-toolbar>

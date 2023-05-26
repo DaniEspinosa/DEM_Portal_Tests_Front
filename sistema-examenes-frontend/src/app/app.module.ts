@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -21,6 +19,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './views/admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './views/user/user-dashboard/user-dashboard.component';
+import { ProfileComponent } from './views/profile/profile.component';
+import { MatListModule } from '@angular/material/list';
+import { SidebarComponent } from './views/admin/sidebar/sidebar.component';
+import { WelcomeComponent } from './views/admin/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,10 @@ import { UserDashboardComponent } from './views/user/user-dashboard/user-dashboa
     LoginComponent,
     HomeComponent,
     DashboardComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    ProfileComponent,
+    SidebarComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,8 @@ import { UserDashboardComponent } from './views/user/user-dashboard/user-dashboa
     MatSnackBarModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
