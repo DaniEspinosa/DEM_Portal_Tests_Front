@@ -9,6 +9,7 @@ import { NormalGuard } from './services/normal.guard';
 import { AdminGuard } from './services/admin.guard';
 import { ProfileComponent } from './views/profile/profile.component';
 import { WelcomeComponent } from './views/admin/welcome/welcome.component';
+import { ViewCategoriasComponent } from './views/admin/view-categorias/view-categorias.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
   { path: 'admin', component: DashboardComponent, canActivate: [AdminGuard], children: [
       { path: 'profile', component: ProfileComponent },
-      { path: '', component: WelcomeComponent }
+      { path: '', component: WelcomeComponent },
+      { path: 'categorias', component: ViewCategoriasComponent }
     ]},
   { path: 'user-dashboard', component: UserDashboardComponent, pathMatch: 'full', canActivate: [NormalGuard] }
 ];

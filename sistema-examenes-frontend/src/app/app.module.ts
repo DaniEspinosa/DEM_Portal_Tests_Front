@@ -23,6 +23,7 @@ import { ProfileComponent } from './views/profile/profile.component';
 import { MatListModule } from '@angular/material/list';
 import { SidebarComponent } from './views/admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './views/admin/welcome/welcome.component';
+import { ViewCategoriasComponent } from './views/admin/view-categorias/view-categorias.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { WelcomeComponent } from './views/admin/welcome/welcome.component';
     UserDashboardComponent,
     ProfileComponent,
     SidebarComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ViewCategoriasComponent
   ],
   imports: [
     BrowserModule,
