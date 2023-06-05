@@ -5,3 +5,16 @@
 h1 {
     font-weight: bold;
 }
+
+.titulo {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.container {
+    padding-top: 20px;
+}
+
+.imagen {
+    width: 50px;
+}
