@@ -1,3 +1,21 @@
 .full-width {
     width: 100%;
 }
+
+.card {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #3F51B5;
+    box-shadow: 5px 5px 5px gray;
+    color: white;
+}
+
+input {
+    background-color: white;
+}
+
+label {
+    color: white;
+    margin-left: 4px;
+    font-size: large;
+}

@@ -2,26 +2,26 @@
     <div class="container">
         <div class="row mt-20">
             <div class="col-md-6 offset-md-3">
-                <mat-card>
+                <div class="card">
                     <div class="container text-center">
-                        <img src="assets/user-interface.png" width="100" height="100">
+                        <img src="assets/user-interface.png" width="100" height="100" >
                     </div>
                     <h1 class="text-center">Iniciar Sesión</h1>
                     <form (ngSubmit)="formSubmit()">
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Nombre de usuario</mat-label>
-                            <input [(ngModel)]="loginData.username" name="username" required matInput placeholder="Escriba su nombre de usuario...">
-                        </mat-form-field>
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Contraseña</mat-label>
-                            <input [(ngModel)]="loginData.password" name="password" required type="password" matInput placeholder="Escriba su contraseña...">
-                        </mat-form-field>
-                        <div class="container text-center">
-                            <button style="margin: 10px;" mat-raised-button color="primary">Iniciar Sesión</button>
-                            <button style="margin: 10px;" type="reset" mat-raised-button color="accent">Limpiar Campos</button>
+                        <div class="full-width form-group" appearance="outline">
+                            <label>Nombre de usuario</label>
+                            <input [(ngModel)]="loginData.username" class="form-control" name="username" color="white" required placeholder="Escriba su nombre de usuario...">
+                        </div>
+                        <div class="full-width form-group mt-4" appearance="outline">
+                            <label>Contraseña</label>
+                            <input [(ngModel)]="loginData.password" class="form-control" name="password" required type="password" matInput placeholder="Escriba su contraseña...">
+                        </div>
+                        <div class="container text-center mt-3">
+                            <button style="margin: 10px;" class="btn btn-success">Iniciar Sesión</button>
+                            <button style="margin: 10px;" class="btn btn-danger" type="reset">Limpiar Campos</button>
                         </div>
                     </form>
-                </mat-card>
+                </div>
             </div>
         </div>
     </div>

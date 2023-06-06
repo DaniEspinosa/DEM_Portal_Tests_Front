@@ -1,9 +1,14 @@
 .card {
     padding: 20px;
+    margin-top: 10px;
 }
 
 h1 {
     font-weight: bold;
+}
+
+.entero {
+    margin: 20px;
 }
 
 .titulo {
