@@ -25,6 +25,9 @@ import { SidebarComponent } from './views/admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './views/admin/welcome/welcome.component';
 import { ViewCategoriasComponent } from './views/admin/view-categorias/view-categorias.component';
 import { AddCategoriaComponent } from './views/admin/add-categoria/add-categoria.component';
+import { ViewExamenesComponent } from './views/admin/view-examenes/view-examenes.component';
+import { AddExamenComponent } from './views/admin/add-examen/add-examen.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,9 @@ import { AddCategoriaComponent } from './views/admin/add-categoria/add-categoria
     SidebarComponent,
     WelcomeComponent,
     ViewCategoriasComponent,
-    AddCategoriaComponent
+    AddCategoriaComponent,
+    ViewExamenesComponent,
+    AddExamenComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,8 @@ import { AddCategoriaComponent } from './views/admin/add-categoria/add-categoria
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatSlideToggleModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

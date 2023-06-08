@@ -11,16 +11,21 @@ import { ProfileComponent } from './views/profile/profile.component';
 import { WelcomeComponent } from './views/admin/welcome/welcome.component';
 import { ViewCategoriasComponent } from './views/admin/view-categorias/view-categorias.component';
 import { AddCategoriaComponent } from './views/admin/add-categoria/add-categoria.component';
+import { ViewExamenesComponent } from './views/admin/view-examenes/view-examenes.component';
+import { AddExamenComponent } from './views/admin/add-examen/add-examen.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'signup', component: SignupComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
-  { path: 'admin', component: DashboardComponent, canActivate: [AdminGuard], children: [
+  {
+    path: 'admin', component: DashboardComponent, canActivate: [AdminGuard], children: [
       { path: 'profile', component: ProfileComponent },
       { path: '', component: WelcomeComponent },
       { path: 'categorias', component: ViewCategoriasComponent },
-      { path: 'add-categoria', component: AddCategoriaComponent }
+      { path: 'add-categoria', component: AddCategoriaComponent },
+      { path: 'examenes', component: ViewExamenesComponent },
+      { path: 'add-examen', component: AddExamenComponent}
     ]
   },
   { path: 'user-dashboard', component: UserDashboardComponent, pathMatch: 'full', canActivate: [NormalGuard] }
