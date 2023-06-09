@@ -12,4 +12,8 @@ export class ExamenService {
   public listarExamenes() {
     return this.http.get(`${baseUrl}/examen/`);
   }
+
+  public agregarExamen(examen: any) {
+    return this.http.post(`${baseUrl}/examen/`, examen);
+  }
 }

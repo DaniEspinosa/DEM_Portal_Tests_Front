@@ -28,6 +28,7 @@ import { AddCategoriaComponent } from './views/admin/add-categoria/add-categoria
 import { ViewExamenesComponent } from './views/admin/view-examenes/view-examenes.component';
 import { AddExamenComponent } from './views/admin/add-examen/add-examen.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSelectModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
