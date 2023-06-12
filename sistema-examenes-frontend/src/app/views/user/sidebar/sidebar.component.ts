@@ -9,11 +9,6 @@ import { CategoriaService } from 'src/app/services/categoria.service';
 })
 export class SidebarComponent implements OnInit {
 
-  @Input() isExpanded: boolean = false;
-  @Output() toggleSidebar: EventEmitter<boolean> = new EventEmitter<boolean>();
-
-  handleSidebarToggle = () => this.toggleSidebar.emit(!this.isExpanded);
-
   categorias: any;
 
   constructor(private categoriaService: CategoriaService, private snack: MatSnackBar) { }

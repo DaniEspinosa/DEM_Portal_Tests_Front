@@ -1,0 +1,20 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <h1>Examenes</h1>
+        <div class="row" *ngIf="examenes">
+            <div class="col-md-4" *ngFor="let e of examenes">
+                <div class="card">
+                    <div class="title">{{ e.categoria.titulo }}</div>
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="../../../../assets/examen.png" alt="Examen" class="examenImage">
+                        </div>
+                        <div class="col-9">
+                            <div class="card-body">{{ e.titulo }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
