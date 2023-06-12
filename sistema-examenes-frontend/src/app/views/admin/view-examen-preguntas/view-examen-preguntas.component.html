@@ -1,0 +1,48 @@
+<h1 class="mt20">Preguntas de {{ titulo }}</h1>
+<div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container text-center">
+                <button class="btn btn-primary" [routerLink]="'/admin/add-pregunta/' + examenId + '/' + titulo">Añadir pregunta</button>
+            </div>
+            <div class="card" *ngFor="let p of preguntas; let i = index">
+                <div class="card-body">
+                    <p class="mt10 parrafo">
+                        <b>{{ i + 1 }})</b>
+                        <span class="ml20" [innerHTML]="p.contenido"></span>
+                    </p>
+                    <div class="container-fluid mt20">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="parrafo">1) <b> {{ p.opcion1 }}</b></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="parrafo">2) <b> {{ p.opcion2 }}</b></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="parrafo">3) <b> {{ p.opcion3 }}</b></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="parrafo">4) <b> {{ p.opcion4 }}</b></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="parrafo mt20">Respuesta correcta: <span class="respuesta">{{ p.respuesta }}</span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-danger mr20" (click)="eliminarPregunta(p.preguntaId)">Eliminar</button>
+                                    <button class="btn btn-primary" [routerLink]="'/admin/pregunta/' + p.preguntaId">Actualizar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

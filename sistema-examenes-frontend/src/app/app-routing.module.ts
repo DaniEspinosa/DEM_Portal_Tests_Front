@@ -13,6 +13,10 @@ import { ViewCategoriasComponent } from './views/admin/view-categorias/view-cate
 import { AddCategoriaComponent } from './views/admin/add-categoria/add-categoria.component';
 import { ViewExamenesComponent } from './views/admin/view-examenes/view-examenes.component';
 import { AddExamenComponent } from './views/admin/add-examen/add-examen.component';
+import { ActualizarExamenComponent } from './views/admin/actualizar-examen/actualizar-examen.component';
+import { ViewExamenPreguntasComponent } from './views/admin/view-examen-preguntas/view-examen-preguntas.component';
+import { AddPreguntaComponent } from './views/admin/add-pregunta/add-pregunta.component';
+import { ActualizarPreguntaComponent } from './views/admin/actualizar-pregunta/actualizar-pregunta.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -25,7 +29,11 @@ const routes: Routes = [
       { path: 'categorias', component: ViewCategoriasComponent },
       { path: 'add-categoria', component: AddCategoriaComponent },
       { path: 'examenes', component: ViewExamenesComponent },
-      { path: 'add-examen', component: AddExamenComponent}
+      { path: 'add-examen', component: AddExamenComponent },
+      { path: 'examen/:examenId', component: ActualizarExamenComponent },
+      { path: 'ver-preguntas/:examenId/:titulo', component: ViewExamenPreguntasComponent },
+      { path: 'add-pregunta/:examenId/:titulo', component: AddPreguntaComponent },
+      { path: 'pregunta/:preguntaId', component: ActualizarPreguntaComponent }
     ]
   },
   { path: 'user-dashboard', component: UserDashboardComponent, pathMatch: 'full', canActivate: [NormalGuard] }

@@ -27,8 +27,13 @@ import { ViewCategoriasComponent } from './views/admin/view-categorias/view-cate
 import { AddCategoriaComponent } from './views/admin/add-categoria/add-categoria.component';
 import { ViewExamenesComponent } from './views/admin/view-examenes/view-examenes.component';
 import { AddExamenComponent } from './views/admin/add-examen/add-examen.component';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSelectModule } from '@angular/material/select';
+import { ActualizarExamenComponent } from './views/admin/actualizar-examen/actualizar-examen.component';
+import { ViewExamenPreguntasComponent } from './views/admin/view-examen-preguntas/view-examen-preguntas.component';
+import { AddPreguntaComponent } from './views/admin/add-pregunta/add-pregunta.component';
+import { ActualizarPreguntaComponent } from './views/admin/actualizar-pregunta/actualizar-pregunta.component';
+import { SidebarComponent as UserSidebar } from "./views/user/sidebar/sidebar.component";
 
 @NgModule({
   declarations: [
@@ -45,7 +50,12 @@ import {MatSelectModule} from '@angular/material/select';
     ViewCategoriasComponent,
     AddCategoriaComponent,
     ViewExamenesComponent,
-    AddExamenComponent
+    AddExamenComponent,
+    ActualizarExamenComponent,
+    ViewExamenPreguntasComponent,
+    AddPreguntaComponent,
+    ActualizarPreguntaComponent,
+    UserSidebar
   ],
   imports: [
     BrowserModule,
