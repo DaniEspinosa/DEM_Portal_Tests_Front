@@ -11,8 +11,8 @@ import { LoginService } from 'src/app/services/login.service';
 export class LoginComponent {
 
   loginData = {
-    "username": '',
-    "password": ''
+    username: '',
+    password: ''
   }
 
   constructor(private snack: MatSnackBar, private loginService: LoginService, private router: Router) { }

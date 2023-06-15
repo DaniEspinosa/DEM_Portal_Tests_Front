@@ -75,8 +75,8 @@
                     Resultado del Examen
                 </div>
                 <div class="text-center mb20">
-                    <h1>Puntos conseguidos: <b>{{ puntosConseguidos }}</b></h1>
-                    <h1>Respuestas correctas: <b>{{ respuestasCorrectas }}</b></h1>
+                    <h1>Puntos conseguidos: <b>{{ puntosConseguidos }}</b> de {{ this.preguntas[0].examen.puntosMaximos }}</h1>
+                    <h1>Respuestas correctas: <b>{{ respuestasCorrectas }}</b> de {{ preguntas.length }}</h1>
                     <h1 class="aprobado mt20" *ngIf="puntosConseguidos >= (this.preguntas[0].examen.puntosMaximos / 2)">
                         ¡¡HAS APROBADO!!
                     </h1>
