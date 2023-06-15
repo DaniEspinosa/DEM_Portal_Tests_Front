@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="ml10">
+        <h1>Instrucciones del Exámen</h1>
+        <h2 class="mt10">{{ examen.titulo }}</h2>
+        <h3>{{ examen.descripcion }}</h3>
+    </div>
+    <hr>
+    <div class="ml10">
+        <h2>Sobre el examen:</h2>
+        <ul>
+            <li>Este examen es solo para fines prácticos.</li>
+            <li>Tienes <b>{{ examen.numeroDePreguntas * 2 }} minutos</b> para enviar el exámen.</li>
+            <li>Puede intentar el examen las veces que quieras.</li>
+            <li>Cada pregunta vale <b>{{ examen.puntosMaximos / examen.numeroDePreguntas }} puntos.</b></li>
+        </ul>
+    </div>
+    <hr>
+    <div class="ml10">
+        <h2>¿Como hago el examen?</h2>
+        <ul>
+            <li>Presione el boton <b>Comenzar</b> para iniciar el examen.</li>
+            <li>El tiempo comenzará en el momento en que haga click en el botón de inicio.</li>
+            <li>Desplácese hacia abajo para pasar a la siguiente pregunta.</li>
+            <li>Haga click en el botón enviar exámen al finalizar el test.</li>
+            <li>El informe de la prueba se genera automáticamente en forma de copia PDF.</li>
+        </ul>
+    </div>
+    <div class="actions text-center">
+        <button (click)="empezarExamen()" class="btn btn-primary">Comenzar test</button>
+    </div>
+</div>

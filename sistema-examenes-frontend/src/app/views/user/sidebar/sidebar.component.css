@@ -1,10 +1,15 @@
 .card {
   padding: 20px;
   margin-top: 10px;
+  box-shadow: 5px 5px 5px gray;
 }
 
 .titulo {
   font-weight: bolder;
   font-size: 30px;
   margin-bottom: 20px;
+}
+
+.subtitulos {
+  font-size: x-large;
 }

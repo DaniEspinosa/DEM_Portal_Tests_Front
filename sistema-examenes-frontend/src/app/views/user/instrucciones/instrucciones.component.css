@@ -4,8 +4,10 @@
     box-shadow: 5px 5px 5px gray;
 }
 
-.titulo {
-    font-weight: bolder;
-    font-size: 30px;
-    margin-bottom: 20px;
+h1 {
+    font-weight: bold;
+}
+
+.actions {
+    margin-top: 20px;
 }

@@ -1,0 +1,66 @@
+.card {
+    padding: 30px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+.row {
+    font-size: large;
+}
+
+label {
+    margin-left: 10px;
+}
+
+.labe {
+    margin-bottom: 5px;
+}
+
+.card-title {
+    font-size: x-large;
+    margin-bottom: 30px;
+}
+
+.card-title2 {
+    font-size: x-large;
+    margin-bottom: 15px;
+}
+
+.card-subtitle {
+    color: grey;
+}
+
+.temporizador {
+    margin: auto;
+    margin-top: 20px;
+}
+
+.tempo {
+    margin-top: 68px;
+}
+
+.fix {
+    position: fixed;
+}
+
+li {
+    margin-bottom: 4px;
+    color: grey;
+}
+
+.aprobado {
+    color: green;
+}
+
+.suspenso {
+    color: red;
+}

@@ -1,0 +1,98 @@
+<div class="bootstrap-wrapper" *ngIf="!esEnviado">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card tempo">
+                    <div class="card-title2">
+                        Reglas
+                    </div>
+                    <ul>
+                        <li>No cambies de pestaña</li>
+                        <li>No minimices la ventana</li>
+                        <li>No actualices la página</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <ng-container *ngIf="preguntas">
+                    <h1 class="mt20">
+                        En curso <b>{{ preguntas[0].examen.titulo }}</b>
+                    </h1>
+                </ng-container>
+                <div *ngFor="let p of preguntas;let i = index" class="card">
+                    <p class="titulo"><b>{{ i + 1 }}) </b><span [innerHTML]="p.contenido">{{ p.opcion1 }}</span></p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-7 mt10 labe">
+                            <input [(ngModel)]="p.respuestaDada" type="radio" [value]="p.opcion1" name={{i}}>
+                            <label>{{ p.opcion1 }}</label>
+                        </div>
+                        <div class="col-md-7 mt10 labe">
+                            <input [(ngModel)]="p.respuestaDada" type="radio" [value]="p.opcion2" name={{i}}>
+                            <label>{{ p.opcion2 }}</label>
+                        </div>
+                        <div class="col-md-7 mt10 labe">
+                            <input [(ngModel)]="p.respuestaDada" type="radio" [value]="p.opcion3" name={{i}}>
+                            <label>{{ p.opcion3 }}</label>
+                        </div>
+                        <div class="col-md-7 mt10 labe">
+                            <input [(ngModel)]="p.respuestaDada" type="radio" [value]="p.opcion4" name={{i}}>
+                            <label>{{ p.opcion4 }}</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </div>
+                <div class="container text-center mt20 mb20">
+                    <button (click)="enviarExamen()" class="btn btn-primary">Enviar Examen</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <!--Barra de progreso-->
+                <div class="card tempo fix">
+                    <div class="card-title2">
+                        Temporizador
+                    </div>
+                    <div class="card-subtitle mb10">
+                        El examen se enviará automáticamente cuando el temporizador termine.
+                    </div>
+                    <h1 class="text-center">{{ obtenerHora() }}</h1>
+                    <mat-spinner mode="determinate" class="temporizador"
+                        [value]="(timer/(this.preguntas.length * 2 * 60) * 100)"></mat-spinner>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bootstrap-wrapper" *ngIf="esEnviado">
+    <div class="row mt20">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-title">
+                    Resultado del Examen
+                </div>
+                <div class="text-center mb20">
+                    <h1>Puntos conseguidos: <b>{{ puntosConseguidos }}</b></h1>
+                    <h1>Respuestas correctas: <b>{{ respuestasCorrectas }}</b></h1>
+                    <h1 class="aprobado mt20" *ngIf="puntosConseguidos >= (this.preguntas[0].examen.puntosMaximos / 2)">
+                        ¡¡HAS APROBADO!!
+                    </h1>
+
+                    <div class="mt20" *ngIf="puntosConseguidos < (this.preguntas[0].examen.puntosMaximos / 2)">
+                        <h1 class="suspenso">
+                            HAS SUSPENDIDO
+                        </h1>
+                        <h2>Vuelve a intentarlo</h2>
+                    </div>
+
+                </div>
+                <div class="actions text-center">
+                    <button class="btn btn-primary ml20" [routerLink]="'/user-dashboard/0'">Ir al inicio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,7 +3,8 @@
         <div class="row mt20">
             <div class="col-md-6 offset-md-3 text-center">
                 <h1>Bienvenido al portal de examenes</h1>
-                <button mat-raised-button color="primary">Inicio</button>
+                <button [routerLink]="'/login'" class="btn btn-primary mr10">Iniciar Sesión</button>
+                <button [routerLink]="'/signup'" class="btn btn-primary">Registrarse</button>
             </div>
         </div>
     </div>

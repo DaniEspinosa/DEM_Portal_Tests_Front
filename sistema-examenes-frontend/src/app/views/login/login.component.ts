@@ -47,7 +47,7 @@ export class LoginComponent {
             this.router.navigate(['admin']);
             this.loginService.loginStatusSubject.next(true);
           } else if (this.loginService.getUserRol() == "NORMAL") {
-            this.router.navigate(['user-dashboard']);
+            this.router.navigate(['user-dashboard/0']);
             this.loginService.loginStatusSubject.next(true);
           } else {
             this.loginService.logout();

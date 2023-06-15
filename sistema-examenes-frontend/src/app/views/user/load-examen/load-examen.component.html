@@ -2,17 +2,28 @@
     <div class="container-fluid">
         <h1>Examenes</h1>
         <div class="row" *ngIf="examenes">
-            <div class="col-md-4" *ngFor="let e of examenes">
-                <div class="card">
-                    <div class="title">{{ e.categoria.titulo }}</div>
-                    <div class="row">
-                        <div class="col-3">
+            <div class="col-md-6" *ngFor="let e of examenes">
+                <div class="card mt10">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-2">
                             <img src="../../../../assets/examen.png" alt="Examen" class="examenImage">
                         </div>
-                        <div class="col-9">
+                        <div class="col-10">
                             <div class="card-body">{{ e.titulo }}</div>
                         </div>
                     </div>
+                    <div class="tituloCategoria mt20 ml20 mr20">{{ e.categoria.titulo }}</div>
+                    <p class="mt10 ml20 mr20">{{ e.descripcion }}</p>
+                    <div class="botones ml20">
+                        <button [routerLink]="'/user-dashboard/instrucciones/' + e.examenId" class="btn btn-primary mt10">Empezar</button>
+                        <button class="btn btn-secondary mt10">Preguntas: {{ e.numeroDePreguntas }}</button>
+                        <button class="btn btn-secondary mt10">Puntos Máximos: {{ e.puntosMaximos }}</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" *ngIf="examenes.length == 0">
+                <div class="card">
+                    <h1 class="sinDatos">No hay exámenes en esta categoría</h1>
                 </div>
             </div>
         </div>

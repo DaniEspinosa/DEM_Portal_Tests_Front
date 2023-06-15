@@ -1,6 +1,6 @@
 .card {
     padding: 20px;
-    margin-top: 10px;
+    box-shadow: 5px 5px 5px gray;
 }
 
 h1 {
@@ -8,9 +8,17 @@ h1 {
     margin-top: 20px;
 }
 
+.tituloCategoria {
+    font-weight: bolder;
+}
+
 .card-body {
     font-weight: bolder;
-    font-size: x-large;
+    font-size: xx-large
+}
+
+.sinDatos{
+    margin-left: 20px;
 }
 
 .card-title {
@@ -30,4 +38,12 @@ h1 {
 
 .row {
     margin-top: 10px;
+}
+
+.botones {
+    margin-top: 10px;
+}
+
+.btn {
+    margin-right: 10px;
 }

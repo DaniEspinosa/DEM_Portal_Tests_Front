@@ -35,6 +35,9 @@ import { AddPreguntaComponent } from './views/admin/add-pregunta/add-pregunta.co
 import { ActualizarPreguntaComponent } from './views/admin/actualizar-pregunta/actualizar-pregunta.component';
 import { SidebarComponent as UserSidebar } from "./views/user/sidebar/sidebar.component";
 import { LoadExamenComponent } from './views/user/load-examen/load-examen.component';
+import { InstruccionesComponent } from './views/user/instrucciones/instrucciones.component';
+import { StartComponent } from './views/user/start/start.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -57,7 +60,9 @@ import { LoadExamenComponent } from './views/user/load-examen/load-examen.compon
     AddPreguntaComponent,
     ActualizarPreguntaComponent,
     UserSidebar,
-    LoadExamenComponent
+    LoadExamenComponent,
+    InstruccionesComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +79,8 @@ import { LoadExamenComponent } from './views/user/load-examen/load-examen.compon
     MatIconModule,
     MatListModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
