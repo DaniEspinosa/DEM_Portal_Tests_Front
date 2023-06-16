@@ -5,9 +5,9 @@
 .card {
     padding: 20px;
     margin-top: 20px;
-    background-color: #3F51B5;
+    background-color: rgb(255, 255, 255);
     box-shadow: 5px 5px 5px gray;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 input {
@@ -15,7 +15,7 @@ input {
 }
 
 label {
-    color: white;
+    color: rgb(0, 0, 0);
     margin-left: 4px;
     font-size: large;
 }

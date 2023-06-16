@@ -27,4 +27,28 @@ export class ViewCategoriasComponent {
       }
     )
   }
+
+  eliminarCategoria(categoriaId: any) {
+    Swal.fire({
+      title: 'Eliminar Categoria',
+      text: '¿Estás serguro de eliminar la categoría?',
+      icon: 'warning',
+      showCancelButton: true,
+      cancelButtonColor: '#3085d6',
+      confirmButtonColor: '#d33',
+      confirmButtonText: 'Eliminar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.categoriaService.eliminarCategoria(categoriaId).subscribe(
+          (dato) => {
+            this.categorias = this.categorias.filter((categoria: any) => categoria.categoriaId != categoriaId);
+            Swal.fire('Categoria eliminada', 'La categoria se ha eliminado correctamente', 'success');
+          }, (error) => {
+            Swal.fire('Error', 'Error al eliminar la categoria', 'error');
+          }
+        );
+      }
+    })
+  }
 }

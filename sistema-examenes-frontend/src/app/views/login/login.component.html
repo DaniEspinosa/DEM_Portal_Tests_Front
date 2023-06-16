@@ -8,16 +8,20 @@
                     </div>
                     <h1 class="text-center">Iniciar Sesión</h1>
                     <form (ngSubmit)="formSubmit()">
-                        <div class="full-width form-group" appearance="outline">
-                            <label>Nombre de usuario</label>
-                            <input [(ngModel)]="loginData.username" class="form-control" name="username" color="white" required placeholder="Escriba su nombre de usuario...">
-                        </div>
-                        <div class="full-width form-group mt-4" appearance="outline">
-                            <label>Contraseña</label>
-                            <input [(ngModel)]="loginData.password" class="form-control" name="password" required type="password" matInput placeholder="Escriba su contraseña...">
-                        </div>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Nombre de usuario</mat-label>
+                            <input required [(ngModel)]="loginData.username" name="username" matInput
+                                placeholder="Escriba su nombre de usuario...">
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Contraseña</mat-label>
+                            <input required [(ngModel)]="loginData.password" name="password" type="password" matInput
+                                placeholder="Escriba su contraseña...">
+                        </mat-form-field>
+
                         <div class="container text-center mt-3">
-                            <button style="margin: 10px;" class="btn btn-success" type="submit">Iniciar Sesión</button>
+                            <button style="margin: 10px;" class="btn btn-primary" type="submit">Iniciar Sesión</button>
                             <button style="margin: 10px;" class="btn btn-danger" type="reset">Limpiar Campos</button>
                         </div>
                     </form>

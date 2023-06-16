@@ -4,6 +4,12 @@
     box-shadow: 5px 5px 5px gray;
 }
 
-.title {
-  
+h1 {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+ul, li, p {
+    font-size: large;
+    margin-bottom: 10px;
 }

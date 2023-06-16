@@ -2,16 +2,16 @@
     <img src="../../../favicon.ico" alt="">
     <span class="ml10">CodeQuiz</span>
     <span class="example-spacer"></span>
-    <button *ngIf="!login.isLoggedIn()" mat-button style="margin-right: 10px;" class="link-light ml20" [routerLink]="'/login'">
+    <button *ngIf="!login.isLoggedIn()" style="margin-right: 10px;" class="btn btn-light" [routerLink]="'/login'">
         Iniciar Sesión
     </button>
-    <button *ngIf="!login.isLoggedIn()" mat-button style="margin-right: 10px;" class="link-light ml20" [routerLink]="'/signup'">
+    <button *ngIf="!login.isLoggedIn()" style="margin-right: 10px;" class="btn btn-light" [routerLink]="'/signup'">
         Registrarse
     </button>
-    <button *ngIf="login.isLoggedIn()" mat-button style="margin-right: 10px;" class="link-light ml20" (click)="logout()">
+    <button *ngIf="login.isLoggedIn()" style="margin-right: 10px;" class="btn btn-light" (click)="logout()">
         Cerrar Sesión
     </button>
-    <button *ngIf="login.isLoggedIn()" mat-button style="margin-right: 10px;" class="link-light ml20" routerLink="/admin/profile">
+    <button *ngIf="login.isLoggedIn()" mat-button style="margin-right: 10px;" class="btn btn-light" routerLink="/admin/profile">
         {{ login.getUser().username }}
     </button>
 </mat-toolbar>
